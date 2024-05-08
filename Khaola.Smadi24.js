@@ -13,7 +13,7 @@ var marker = L.marker([40.68965691085725, -73.96537769031497]).addTo(map);
 marker.bindPopup("<b>Khaola's Place!</b><br>This is a Leaflet map.").openPopup();
 
 // Add a marker
-var yemenatmarker = L.marker([40.627368087242274, -74.02169893400452]).addTo(map); 
+var yemenatmarker = L.marker([40.627368087242274,-74.02169893400452]).addTo(map); 
 
 // Add a popup
 yemenatmarker.bindPopup('
@@ -80,8 +80,22 @@ fetch('https://khaolasmadi.github.io/khaolageg212/nighttimeroute.geojson')
     console.error('Error loading GeoJSON file:', error); 
 });
 
-
-
+fetch('https://khaolasmadi.github.io/khaolageg212/buildings.geojson')
+.then(response => response.json())
+.then(geojson => {
+     // Customize the style of the poly
+     var polygonStyle = {
+	 fillColor: 'black', 
+	 fillOpacity: 0.5, 
+     };
+	
+     L.geoJSON(geojson, {
+	 style: polygonStyle
+     }).addTo(map);L.
+})
+.catch(error => {
+    console.error('Error loading GeoJSON file:', error); 
+});
 
 
 
