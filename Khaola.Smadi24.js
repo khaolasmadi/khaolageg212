@@ -16,10 +16,10 @@ marker.bindPopup("<b>Khaola's Place!</b><br>This is a Leaflet map.").openPopup()
 var yemenatmarker = L.marker([40.627368087242274, -74.02169893400452]).addTo(map); 
 
 // Add a popup
-yemenatmarker.bindPopup('
+yemenatmarker.bindPopup(`
     <b>Yemenat</b><br>Best Yemeni Food in Bay Ridge<br>
     <img src="https://khaolasmadi.github.io/khaolageg212/yemenat.jpeg" alt="Yemenat" style="width: 100px; height: auto;">
-').openPopup();
+`).openPopup();
 
 // Add a marker
 var bestwesterngregoryhotelmarker = L.marker([40.624877789452846, -74.0274744855723]).addTo(map); 
