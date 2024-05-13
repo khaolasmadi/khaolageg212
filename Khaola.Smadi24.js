@@ -113,15 +113,15 @@ var categoryColors = {
 	"2": "orange",
 	"3": "yellow",
 	"4": "green",
-	"x": "gray"  
+	"X": "gray"  
 };
 
 function getFeatureStyle(feature) {
 	var category = feature.properties.hurricane_;
-        var color = catgoreycolors[category] || "gray";
+        var color = categoryColors[category] || "gray";
         var fillOpacity = category === "X" ? 0 : 0.5;
 	return {
-		fillcolor: color,
+		fillColor: color,
       		fillOpacity: fillOpacity, 
 	};
 }
