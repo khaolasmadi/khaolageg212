@@ -90,7 +90,23 @@ fetch('https://khaolasmadi.github.io/khaolageg212/nighttimeroute.geojson')
 });
 
 
-
+fetch('https://khaolasmadi.github.io/khaolageg212/color.geojson')
+.then(response => response.json())
+.then(geojson => {
+     // Customize the style of the line
+     var polygonStyle = {
+	 color: 'black', // Change color as needed
+	 weight: 0.5, // Change weight as needed
+     }; 
+	    
+     // Add the GeoJSON line to the map
+     L.geoJSON(geojson, {
+	 style: polygonStyle
+     }).addTo(map);
+})
+.catch(error => {
+    console.error('Error loading GeoJSON file:', error); 
+});
 
 
 
