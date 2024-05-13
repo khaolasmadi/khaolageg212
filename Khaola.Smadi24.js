@@ -43,7 +43,10 @@ movietheatermarker.bindPopup(`
 var owlsheadparkmarker = L.marker([40.64012444858571, -74.03245666095577]).addTo(map); 
 
 // Add a popup
-owlsheadparkmarker.bindPopup("<b> Owls Head Park</b><br>The best park my kids love to go to play in the weekend").openPopup();
+owlsheadparkmarker.bindPopup(`
+<b> Owls Head Park</b><br>The best park my kids love to go to play in the weekend
+<img src="https://khaolasmadi.github.io/khaolageg212/owl.jpeg" alt="Yemenat" style="width: 100px; height: auto;">
+`).openPopup();
 
 // Load the GeoJSON line file
 fetch('https://khaolasmadi.github.io/khaolageg212/daytimeroute.geojson')
