@@ -27,7 +27,7 @@ var bestwesterngregoryhotelmarker = L.marker([40.624877789452846, -74.0274744855
 // Add a popup
 bestwesterngregoryhotelmarker.bindPopup(`
 <b> Best Western Gregory Hotel</b><br>Hotel that my family stays at when they visit
-<img src="https://khaolasmadi.github.io/khaolageg212/yemenat.jpeg" alt="Yemenat" style="width: 100px; height: auto;">
+<img src="https://khaolasmadi.github.io/khaolageg212/hotel.jpg" alt="Yemenat" style="width: 100px; height: auto;">
 `).openPopup();
 
 // Add a marker
