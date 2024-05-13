@@ -126,7 +126,7 @@ function getFeatureStyle(feature) {
 	};
 }
 
-fetch("https://github.com/khaolasmadi/khaolageg212/blob/main/Hurricane_Evacuation_Zones.geojson")
+fetch("https://github.com/khaolasmadi/khaolageg212/Hurricane_Evacuation_Zones.geojson")
 .then(response => response.json())
 .then(geojson => {
 	L.geoJSON(geojson, {
