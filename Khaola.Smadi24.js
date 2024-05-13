@@ -25,7 +25,10 @@ yemenatmarker.bindPopup(`
 var bestwesterngregoryhotelmarker = L.marker([40.624877789452846, -74.0274744855723]).addTo(map); 
 
 // Add a popup
-bestwesterngregoryhotelmarker.bindPopup("<b> Best Western Gregory Hotel</b><br>Hotel that my family stays at when they visit").openPopup();
+bestwesterngregoryhotelmarker.bindPopup(`
+<b> Best Western Gregory Hotel</b><br>Hotel that my family stays at when they visit
+<img src="https://khaolasmadi.github.io/khaolageg212/yemenat.jpeg" alt="Yemenat" style="width: 100px; height: auto;">
+`).openPopup();
 
 // Add a marker
 var movietheatermarker = L.marker([40.6339785470735, -74.02087658647699]).addTo(map); 
