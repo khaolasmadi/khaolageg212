@@ -34,7 +34,10 @@ bestwesterngregoryhotelmarker.bindPopup(`
 var movietheatermarker = L.marker([40.6339785470735, -74.02087658647699]).addTo(map); 
 
 // Add a popup
-movietheatermarker.bindPopup("<b> Alpine Cinema</b><br>the movietheater that I take my kids to watching the movie that the likes").openPopup();
+movietheatermarker.bindPopup(`
+<b> Alpine Cinema</b><br>the movietheater that I take my kids to watching the movie that the likes
+<img src="https://khaolasmadi.github.io/khaolageg212/cinema.jpg" alt="Yemenat" style="width: 100px; height: auto;">
+`).openPopup();
 
 // Add a marker
 var owlsheadparkmarker = L.marker([40.64012444858571, -74.03245666095577]).addTo(map); 
