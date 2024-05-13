@@ -108,6 +108,32 @@ fetch('https://khaolasmadi.github.io/khaolageg212/color.geojson')
     console.error('Error loading GeoJSON file:', error); 
 });
 
+var categoryColors = {
+	"1": "red",
+	"2": "orange",
+	"3": "yellow",
+	"4": "green",
+	"x": "gray"  
+};
 
+function getFeatureStyle(feature) {
+	var category = feature. properties. hurrican_;
+        var color = catgoreycolors[category] || "gray";
+        var fillOpacity = category === "X" ? 0 : 0.5;
+	return {
+		fillcolor: color,
+      		fillOpacity: fillOpacity, 
+	};
+}
 
+fetch("https://github.com/khaolasmadi/khaolageg212/blob/main/Hurricane_Evacuation_Zones.geojson")
+.then(response => response.json())
+.then(geojson => {
+	L.geoJSON(geojson, {
+		style: getFeatureStyle
+	}).addTo(map);
+})
+.catch(error => {
+    console.error('Error loading GeoJSON file:', error); 
+});
 
